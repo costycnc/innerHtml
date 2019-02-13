@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html>
+<head>
+<script>
+function myFunction() {
+  var x = document.getElementById("myP").innerHTML;
+  document.getElementById("demo").innerHTML = x;
+document.body.innerHTML = document.body.innerHTML.replace('stroke="black"', 'stroke="red"');
+document.body.innerHTML = document.body.innerHTML.replace('fill="red"', 'stroke="black"');
+}
+</script>
+
+</head>
 <body>
+
+<svg height="100" width="100">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+  Sorry, your browser does not support inline SVG.  
+</svg> 
 
 <p id="myP">I am a paragraph.</p>
 
@@ -10,12 +26,7 @@
 
 <p id="demo"></p>
 
-<script>
-function myFunction() {
-  var x = document.getElementById("myP").innerHTML;
-  document.getElementById("demo").innerHTML = x;
-}
-</script>
+
 
 </body>
 </html>
